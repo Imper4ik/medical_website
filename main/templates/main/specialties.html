@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <aside class="sidebar">
+        <ul>
+            <li><a href="{% url 'cardiology:cardiology' %}">Кардиология</a></li>
+            <li><a href="#neurology">Неврология</a></li>
+            <li><a href="#orthopedics">Ортопедия</a></li>
+            <li><a href="#pediatrics">Педиатрия</a></li>
+            <li><a href="#terapia">Терапия</a></li>
+            <li><a href="#hirurgia">Хирургия</a></li>
+            <!-- Добавьте больше ссылок по необходимости -->
+        </ul>
+    </aside>
+    <section class="main-content">
+        <h2 id="cardiology">Кардиология</h2>
+        <p>Информация о кардиологии...</p>
+
+        <h2 id="neurology">Неврология</h2>
+        <p>Информация о неврологии...</p>
+
+        <h2 id="orthopedics">Ортопедия</h2>
+        <p>Информация об ортопедии...</p>
+
+        <h2 id="pediatrics">Педиатрия</h2>
+        <p>Информация о педиатрии...</p>
+
+        <!-- Добавьте больше секций по необходимости -->
+    </section>
+</div>
+{% endblock %}
