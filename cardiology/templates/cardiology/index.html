@@ -1,8 +1,9 @@
 <!-- cardiology/templates/cardiology/cardiology.html -->
 {% extends 'main/base.html' %}
-
+{% load static %}
 {% block content %}
 <div><b>Основные забллевания сердца:</b></div>
+    <br>
     <ul>
         <li><a style="color: brown" href="{% url 'cardiology:infarct' %}">Инфаркт Миокарда</a></li>
         <li><a style="color: brown" href="{% url 'cardiology:aritmic' %}">Аритмия</a></li>
