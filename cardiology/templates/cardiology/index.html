@@ -4,8 +4,8 @@
 {% block content %}
 <div><b>Основные забллевания сердца:</b></div>
     <ul>
-        <li><a style="color: brown" href="#infarct">Инфаркт Миокарда</a></li>
-        <li><a style="color: brown" href="#aritmic">Аритмия</a></li>
-        <li><a style="color: brown" href="#serd_nedost">Сердечная Недостаточность</a></li>
+        <li><a style="color: brown" href="{% url 'cardiology:infarct' %}">Инфаркт Миокарда</a></li>
+        <li><a style="color: brown" href="{% url 'cardiology:aritmic' %}">Аритмия</a></li>
+        <li><a style="color: brown" href="{% url 'cardiology:heart_failure' %}">Сердечная Недостаточность</a></li>
     </ul>
 {% endblock %}
