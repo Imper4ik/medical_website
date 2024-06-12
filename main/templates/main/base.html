@@ -1,13 +1,40 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Website</title>
+    <title>{{ title }}</title>
     <link rel="icon" href="{% static 'imagens/favicon.png' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        header nav ul li:last-child {
+            margin-right: 0;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,13 +48,17 @@
         </nav>
     </header>
 
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+    <div class="wrapper">
 
-    <footer>
-        <p>&copy; 2024 Medical Website</p>
-    </footer>
+        <div class="main">
+            {% block content %}
+            {% endblock %}
+        </div>
+<!--
+        <footer class="footer">  Добавляем класс "footer"
+            <p>&copy; 2024 Medical Website</p>
+            <p><b>Внимание!!!</b> Этот сайт несёт только ознакомительную информацию. В случае предположений обращайтесь в квалифицированные мед учреждения.</p>
+        </footer> -->
+    </div>
 </body>
 </html>

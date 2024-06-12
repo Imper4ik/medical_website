@@ -7,16 +7,20 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'main/home.html')
+    content = {'title': 'Home Page'}
+    return render(request, 'main/home.html', content)
 
 
 def specialties(request):
-    return render(request, 'main/specialties.html')
+    content = {'title': 'Specialties Page'}
+    return render(request, 'main/specialties.html',content)
 
 
 def contact(request):
-    return render(request, 'main/contact.html')
+    content = {'title': 'Contact Page'}
+    return render(request, 'main/contact.html', content)
 
 
 def appointment(request):
-    return render(request, 'main/appointment.html')
+    content = {'title': 'Appointment Page'}
+    return render(request, 'main/appointment.html', content)
