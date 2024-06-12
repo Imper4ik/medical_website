@@ -4,16 +4,20 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'cardiology/index.html')
+    content = {'title': 'Main_Cardiology_page'}
+    return render(request, 'cardiology/index.html', content)
 
 
 def infarct(request):
-    return render(request, 'cardiology/infarct_miokarda.html')
+    content = {'title': 'Infarct'}
+    return render(request, 'cardiology/infarct_miokarda.html', content)
 
 
 def aritmic(request):
-    return render(request, 'cardiology/aritmic.html')
+    content = {'title': 'Aritmic'}
+    return render(request, 'cardiology/aritmic.html', content)
 
 
 def heart_failure(request):
-    return render(request, 'cardiology/serd_nedost.html')
+    content = {'title': 'Heart_failure'}
+    return render(request, 'cardiology/serd_nedost.html', content)

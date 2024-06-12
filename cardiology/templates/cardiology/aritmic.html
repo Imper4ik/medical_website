@@ -1,10 +1,117 @@
-<!-- cardiology/templates/cardiology/cardiology.html -->
-{% extends 'main/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медицинский сайт</title>
 
-{% block content %}
-<div><b>Аритмия:</b></div>
-    <p>Аритмия это - </p>
-    <ul>
+    <link rel="icon" href="{% static 'imagens/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        header nav ul li:last-child {
+            margin-right: 0;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .important {
+            color: #cc0000;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'main:home' %}">Дом</a></li>
+                    <li><a href="{% url 'main:specialties' %}">Специальности</a></li>
+                    <li><a href="{% url 'main:contact' %}">Контакт</a></li>
+                    <li><a href="{% url 'main:appointment' %}">Запись</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    </ul>
-{% endblock %}
+        <div class="content">
+            <main>
+                <section class="section">
+                    <h1>Аритмия</h1>
+                    <p>Аритмия - это нарушение ритма сердечных сокращений. В норме сердце сокращается ритмично и равномерно, обеспечивая эффективную циркуляцию крови по организму. Однако при наличии аритмии этот ритм может быть нарушен, что может привести к различным проблемам со здоровьем.</p>
+                </section>
+                <section class="section">
+                    <h2>Виды аритмии:</h2>
+                    <ol>
+                        <li>Синусовая тахикардия</li>
+                        <li>Фибрилляция предсердий (ФП)</li>
+                        <li>Экстрасистолия</li>
+                        <li>Брадикардия</li>
+                        <li>Аритмия после инфаркта</li>
+                    </ol>
+                </section>
+                <section class="section">
+                    <h2>Признаки аритмии:</h2>
+                    <ul>
+                        <li>Необычные ощущения сердцебиения, такие как прерывистые удары, сердцебиение или пульсации в груди.</li>
+                        <li>Головокружение или обмороки.</li>
+                        <li>Ощущение слабости или усталости.</li>
+                        <li>Одышка.</li>
+                        <li>Боль в груди.</li>
+                    </ul>
+                </section>
+                <section class="section">
+                    <h2>Степени тяжести:</h2>
+                    <p>Степень тяжести аритмии может варьироваться от легкой и временной до тяжелой и потенциально опасной для жизни. Она может быть обусловлена различными причинами, включая нарушения в электрической системе сердца, сердечные заболевания, стресс и другие факторы.</p>
+                </section>
+                <section class="section">
+                    <h2>Неотложная помощь:</h2>
+                    <p>В случае возникновения признаков аритмии, особенно если они сопровождаются головокружением, обмороками или болями в груди, необходимо немедленно обратиться за медицинской помощью. Врачи могут пров
