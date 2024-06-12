@@ -1,32 +1,88 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-    <aside class="sidebar">
-        <ul>
-            <li><a href="{% url 'cardiology:cardiology' %}">Кардиология</a></li>
-            <li><a href="#terapia">Терапия</a></li>
-            <li><a href="{% url 'surgery:index' %}">Хирургия</a></li>
-            <li><a href="#pediatrics">Педиатрия</a></li>
-            <li><a href="#neurology">Неврология</a></li>
-            <li><a href="#orthopedics">Ортопедия</a></li>
-            <!-- Добавьте больше ссылок по необходимости -->
-        </ul>
-    </aside>
-    <section class="main-content">
-        <h2 id="cardiology">Кардиология</h2>
-        <p>Информация о кардиологии...</p>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
 
-        <h2 id="neurology">Неврология</h2>
-        <p>Информация о неврологии...</p>
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
 
-        <h2 id="orthopedics">Ортопедия</h2>
-        <p>Информация об ортопедии...</p>
+        .nav-links a {
+            color: #003366;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 15px;
+            border: 2px solid #003366;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-        <h2 id="pediatrics">Педиатрия</h2>
-        <p>Информация о педиатрии...</p>
+        .nav-links a:hover {
+            background-color: #003366;
+            color: #fff;
+        }
 
-        <!-- Добавьте больше секций по необходимости -->
-    </section>
-</div>
+        .main-content {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h2 {
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="nav-links">
+                <a href="{% url 'cardiology:cardiology' %}">Кардиология</a>
+                <a href="#terapia">Терапия</a>
+                <a href="{% url 'surgery:index' %}">Хирургия</a>
+                <a href="#pediatrics">Педиатрия</a>
+                <a href="#neurology">Неврология</a>
+                <a href="#orthopedics">Ортопедия</a>
+        </div>
+        <section class="main-content">
+            <h2 id="cardiology">Кардиология</h2>
+            <p>Информация о кардиологии. Здесь вы найдете материалы по заболеваниям сердца и сосудов, методам их диагностики и лечения, а также профилактике кардиологических заболеваний.</p>
+
+            <h2 id="terapia">Терапия</h2>
+            <p>Информация о терапии. Этот раздел охватывает широкий спектр внутренних болезней, методы диагностики и лечения, а также советы по поддержанию общего здоровья.</p>
+
+            <h2 id="surgery">Хирургия</h2>
+            <p>Информация о хирургии. Здесь представлены статьи о различных хирургических вмешательствах, подготовке к операциям и восстановлению после них, а также новейшие методики в хирургии.</p>
+
+            <h2 id="pediatrics">Педиатрия</h2>
+            <p>Информация о педиатрии. Раздел содержит информацию о детских заболеваниях, методах их диагностики и лечения, а также рекомендации по уходу за детьми и их воспитанию.</p>
+
+            <h2 id="neurology">Неврология</h2>
+            <p>Информация о неврологии. Раздел включает статьи о заболеваниях нервной системы, методах диагностики, современных подходах к лечению и профилактике неврологических расстройств.</p>
+
+            <h2 id="orthopedics">Ортопедия</h2>
+            <p>Информация об ортопедии. Здесь представлены материалы о заболеваниях и травмах опорно-двигательного аппарата, методах их лечения и реабилитации, а также советы по профилактике.</p>
+        </section>
+    </div>
 {% endblock %}
