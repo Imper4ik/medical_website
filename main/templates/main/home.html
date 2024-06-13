@@ -6,17 +6,68 @@
 {% endblock %}
 
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
     <div class="welcome-section">
         <h1>Добро пожаловать на наш сайт!</h1>
         <p>На данном сайте вы найдёте различную медицинскую информацию по следующим направлениям:</p>
-        <br>
-        <ul>
-            <li><a href="{% url 'cardiology:cardiology' %} " style="color: brown">Кардиология</a></li>
-            <li><a href="{% url 'therapy:index' %}" style="color: brown">Терапия</a></li>
-            <li><a href="{% url 'surgery:index' %}" style="color: brown">Хирургия</a></li>
-            <li><a href="{% url 'pediatrics:index' %}" style="color: brown">Педиатрия</a></li>
-            <li><a href="{% url 'neurology:index' %}" style="color: brown">Неврология</a></li>
-            <li><a href="{% url 'orthopedics:index' %}" style="color: brown">Ортопедия</a></li>
+        <ul class="specialties">
+            <li><a href="{% url 'cardiology:cardiology' %}">Кардиология</a></li>
+            <li><a href="{% url 'therapy:index' %}">Терапия</a></li>
+            <li><a href="{% url 'surgery:index' %}">Хирургия</a></li>
+            <li><a href="{% url 'pediatrics:index' %}">Педиатрия</a></li>
+            <li><a href="{% url 'neurology:index' %}">Неврология</a></li>
+            <li><a href="{% url 'orthopedics:index' %}">Ортопедия</a></li>
+        </ul>
+    </div>
+
+    <div class="sections">
+        <div class="section">
+            <h2>Кардиология</h2>
+            <p>Кардиология — это раздел медицины, который изучает строение и функции сердца и сосудов, а также занимается профилактикой, диагностикой и лечением сердечно-сосудистых заболеваний.</p>
+            <img src="{% static 'images/cardiology.jpg' %}" alt="Кардиология">
+        </div>
+
+        <div class="section">
+            <h2>Терапия</h2>
+            <p>Терапия — это область медицины, которая занимается диагностикой и лечением внутренних болезней, включая заболевания дыхательной, пищеварительной и мочевыделительной систем.</p>
+            <img src="{% static 'images/therapy.jpg' %}" alt="Терапия">
+        </div>
+
+        <div class="section">
+            <h2>Хирургия</h2>
+            <p>Хирургия — это область медицины, которая занимается лечением заболеваний и травм путем оперативного вмешательства.</p>
+            <img src="{% static 'images/surgery.jpg' %}" alt="Хирургия">
+        </div>
+
+        <div class="section">
+            <h2>Педиатрия</h2>
+            <p>Педиатрия — это область медицины, которая занимается лечением и профилактикой заболеваний у детей.</p>
+            <img src="{% static 'images/pediatrics.jpg' %}" alt="Педиатрия">
+        </div>
+
+        <div class="section">
+            <h2>Неврология</h2>
+            <p>Неврология — это область медицины, которая изучает строение, функции и заболевания нервной системы.</p>
+            <img src="{% static 'images/neurology.jpg' %}" alt="Неврология">
+        </div>
+
+        <div class="section">
+            <h2>Ортопедия</h2>
+            <p>Ортопедия — это область медицины, которая занимается лечением заболеваний и повреждений опорно-двигательного аппарата.</p>
+            <img src="{% static 'images/orthopedics.jpg' %}" alt="Ортопедия">
+        </div>
+    </div>
+
+    <div class="news-section">
+        <h2>Актуальная информация</h2>
+        <ul class="news">
+            <li><a href="#">Новость 1: Последние достижения в кардиологии</a></li>
+            <li><a href="#">Новость 2: Новые методы лечения в терапии</a></li>
+            <li><a href="#">Новость 3: Современные хирургические технологии</a></li>
+            <li><a href="#">Новость 4: Вакцинация и педиатрия</a></li>
+            <li><a href="#">Новость 5: Исследования в области неврологии</a></li>
+            <li><a href="#">Новость 6: Реабилитация в ортопедии</a></li>
         </ul>
     </div>
 {% endblock %}
