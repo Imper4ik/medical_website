@@ -2,11 +2,132 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block content %}
-<div><b>Основные забллевания сердца:</b></div>
-    <br>
-    <ul>
-        <li><a style="color: brown" href="{% url 'cardiology:infarct' %}">Инфаркт Миокарда</a></li>
-        <li><a style="color: brown" href="{% url 'cardiology:aritmic' %}">Аритмия</a></li>
-        <li><a style="color: brown" href="{% url 'cardiology:heart_failure' %}">Сердечная Недостаточность</a></li>
-    </ul>
+<style>
+    /* Общие стили */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        background-color: #003366;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    header nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    header nav ul li:last-child {
+        margin-right: 0;
+    }
+    header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+    header nav ul li a:hover {
+        text-decoration: underline;
+    }
+    .content {
+        flex: 1;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    .important {
+        color: #cc0000;
+        font-weight: bold;
+    }
+    footer {
+        background-color: #003366;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    /* Стили для кардиологии */
+    .cardiology-definition {
+        margin-bottom: 20px;
+    }
+    .cardiology-definition p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+    }
+    .cardiology-list {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .cardiology-list li {
+        margin-bottom: 10px;
+    }
+    .cardiology-list li a {
+        color: brown;
+        text-decoration: none;
+    }
+    .cardiology-list li a:hover {
+        text-decoration: underline;
+    }
+    .bottom-links {
+        margin-top: 30px;
+        text-align: center;
+    }
+    .bottom-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .bottom-links ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .bottom-links ul li a {
+        color: brown;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .bottom-links ul li a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="wrapper">
+
+    <div class="content">
+        <div class="cardiology-definition">
+            <h1>Кардиология</h1>
+            <p>Кардиология – это медицинская специализация, посвященная изучению и лечению заболеваний сердечно-сосудистой системы. Она включает в себя диагностику и лечение таких распространенных состояний, как ишемическая болезнь сердца, аритмии, гипертония, пороки сердца и сердечная недостаточность. Кардиология активно использует передовые методы диагностики, такие как ЭКГ, УЗИ сердца, коронарография, и разнообразные методы лечения, включая медикаментозное и хирургическое вмешательство.</p>
+
+            <p>Кардиология играет ключевую роль в поддержании здоровья и продлении жизни пациентов с сердечно-сосудистыми заболеваниями. Специалисты в области кардиологии работают как в стационарных условиях, так и в амбулаторных центрах, обеспечивая необходимое лечение и рекомендации по профилактике сердечно-сосудистых заболеваний. Кардиологические исследования и разработки новых методов лечения играют важную роль в современной медицине.</p>
+        </div>
+
+        <div class="bottom-links">
+            <h3><a href="{% url 'cardiology:heart_success' %}">Подробнее о заболеваниях:</a></h3>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ваша компания. Все права защищены.</p>
+    </footer>
+</div>
+
 {% endblock %}
+

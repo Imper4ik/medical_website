@@ -11,12 +11,12 @@
         <p>На данном сайте вы найдёте различную медицинскую информацию по следующим направлениям:</p>
         <br>
         <ul>
-            <li>Кардиология</li>
-            <li>Терапия</li>
-            <li>Хирургия</li>
-            <li>Педиатрия</li>
-            <li>Неврология</li>
-            <li>Ортопедия</li>
+            <li><a href="{% url 'cardiology:cardiology' %} " style="color: brown">Кардиология</a></li>
+            <li><a href="{% url 'therapy:index' %}" style="color: brown">Терапия</a></li>
+            <li><a href="{% url 'surgery:index' %}" style="color: brown">Хирургия</a></li>
+            <li><a href="{% url 'pediatrics:index' %}" style="color: brown">Педиатрия</a></li>
+            <li><a href="{% url 'neurology:index' %}" style="color: brown">Неврология</a></li>
+            <li><a href="{% url 'orthopedics:index' %}" style="color: brown">Ортопедия</a></li>
         </ul>
     </div>
 {% endblock %}

@@ -1,0 +1,40 @@
+
+{% extends 'main/base.html' %}
+{% block content %}
+<style>
+    /* Стили для страницы о заболеваниях */
+    .diseases-content {
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    .diseases-list {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .diseases-list li {
+        margin-bottom: 10px;
+    }
+    .diseases-list li a {
+        color: brown;
+        text-decoration: none;
+    }
+    .diseases-list li a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="content diseases-content">
+        <h1>Заболевания сердца</h1>
+        <ul class="diseases-list">
+            <li><a href="#">Инфаркт миокарда</a></li>
+            <li><a href="#">Аритмия</a></li>
+            <li><a href="#">Сердечная недостаточность</a></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

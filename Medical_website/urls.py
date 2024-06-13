@@ -23,4 +23,8 @@ urlpatterns = [
     path('', include('main.urls'), name='main'),
     path('cardiology/', include('cardiology.urls'), name='cardiology'),
     path('surgery/', include('surgery.urls'), name='surgery'),
+    path('neurology/', include('neurology.urls'), name='neurology'),
+    path('orthopedics/', include('orthopedics.urls'), name='orthopedics'),
+    path('pediatrics/', include('pediatrics.urls'), name='pediatrics'),
+    path('therapy/', include('therapy.urls'), name='therapy'),
 ]

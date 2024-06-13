@@ -21,3 +21,8 @@ def aritmic(request):
 def heart_failure(request):
     content = {'title': 'Heart_failure'}
     return render(request, 'cardiology/serd_nedost.html', content)
+
+
+def heart_success(request):
+    content = {'title': 'Main Ills'}
+    return render(request, 'cardiology/main_ills.html', content)

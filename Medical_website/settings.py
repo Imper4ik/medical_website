@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "main.apps.MainConfig",
     "cardiology.apps.CardiologyConfig",
-    "surgery.apps.SurgeryConfig"
+    "surgery.apps.SurgeryConfig",
+    "neurology.apps.NeurologyConfig",
+    "orthopedics.apps.OrthopedicsConfig",
+    "pediatrics.apps.PediatricsConfig",
+    "therapy.apps.TherapyConfig",
 ]
 
 MIDDLEWARE = [
