@@ -4,5 +4,6 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'surgery/index.html')
+    content = {'title': 'surgery'}
+    return render(request, 'surgery/index.html', content)
 
