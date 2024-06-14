@@ -1,4 +1,68 @@
 {% extends 'main/base.html' %}
+{% load static %}
+
 {% block content %}
-    <h1>Neurology</h1>
+    <style>
+        .neurology-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .neurology-container h1 {
+            text-align: center;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+        }
+
+        .neurology-container p {
+            text-align: justify;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .neurology-directions {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .neurology-directions li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .neurology-directions li:hover {
+            background-color: #c9e0f5;
+        }
+
+        .neurology-directions li a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .neurology-directions li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="neurology-container">
+        <h1>Неврология</h1>
+        <p>Неврология – это медицинская специальность, занимающаяся диагностикой и лечением заболеваний нервной системы. Неврологи работают с пациентами, страдающими от различных расстройств, таких как головные боли, эпилепсия, инсульты, деменция и многие другие неврологические заболевания.</p>
+        <p>Основные направления неврологии включают:</p>
+        <ul class="neurology-directions">
+            <li><a href="#">Головные боли и мигрени</a></li>
+            <li><a href="#">Эпилепсия</a></li>
+            <li><a href="#">Инсульты и сосудистые заболевания мозга</a></li>
+            <li><a href="#">Двигательные расстройства</a></li>
+            <li><a href="#">Деменция и болезнь Альцгеймера</a></li>
+            <li><a href="#">Невропатии и нейромы</a></li>
+        </ul>
+    </div>
 {% endblock %}

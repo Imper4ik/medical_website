@@ -10,7 +10,7 @@ def index(request):
 
 def infarct(request):
     content = {'title': 'Infarct'}
-    return render(request, 'cardiology/infarct_miokarda.html', content)
+    return render(request, 'cardiology/heart failure/infarct_miokarda.html', content)
 
 
 def aritmic(request):

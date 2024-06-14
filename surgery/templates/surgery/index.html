@@ -1,9 +1,80 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title_page %}
- <title>Main</title>
-{% endblock %}
 {% block content %}
-    <h1>Here will be info about surgery</h1>
+    <style>
+        .surgery-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .surgery-container h1 {
+            text-align: center;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+        }
+
+        .surgery-container p {
+            text-align: justify;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .surgery-topics {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .surgery-topics li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .surgery-topics li:hover {
+            background-color: #c9e0f5;
+        }
+
+        .surgery-topics li a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .surgery-topics li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="surgery-container">
+        <h1>Хирургия</h1>
+        <p>Хирургия — это медицинская специальность, которая занимается оперативным лечением различных заболеваний и состояний. Хирурги проводят различные виды операций, направленных на устранение патологий, восстановление функций органов и тканей, а также на лечение травм.</p>
+        <p>Основные направления хирургии включают:</p>
+        <ul class="surgery-topics">
+            <li>
+                <a href="#">Общая хирургия</a> – занимается оперативным лечением различных органов и систем человеческого организма, включая желудочно-кишечный тракт, печень, поджелудочную железу и другие.
+            </li>
+            <li>
+                <a href="#">Кардиохирургия</a> – специализация, занимающаяся операциями на сердце и сосудах, такими как коронарное шунтирование, операции на клапанах сердца и аневризмы аорты.
+            </li>
+            <li>
+                <a href="#">Ортопедическая хирургия</a> – включает в себя операции на костях, суставах и связках, такие как артропластика (замена суставов) и коррекция деформаций.
+            </li>
+            <li>
+                <a href="#">Нейрохирургия</a> – занимается операциями на мозге и спинном мозге, включая удаление опухолей, коррекцию дефектов и лечение травм нервной системы.
+            </li>
+            <li>
+                <a href="#">Торакальная и сосудистая хирургия</a> – специализируется на операциях в грудной полости и на сосудах, таких как операции на легких и артериях.
+            </li>
+            <li>
+                <a href="#">Урологическая хирургия</a> – занимается операциями на органах мочеполовой системы, включая почки, мочевой пузырь и предстательную железу.
+            </li>
+        </ul>
+    </div>
 {% endblock %}

@@ -59,11 +59,11 @@
     <div class="container">
         <div class="nav-links">
                 <a href="{% url 'cardiology:cardiology' %}">Кардиология</a>
-                <a href="#terapia">Терапия</a>
+                <a href="{% url 'therapy:index' %}">Терапия</a>
                 <a href="{% url 'surgery:index' %}">Хирургия</a>
-                <a href="#pediatrics">Педиатрия</a>
-                <a href="#neurology">Неврология</a>
-                <a href="#orthopedics">Ортопедия</a>
+                <a href="{% url 'pediatrics:index' %}">Педиатрия</a>
+                <a href="{% url 'neurology:index' %}">Неврология</a>
+                <a href="{% url 'orthopedics:index' %}">Ортопедия</a>
         </div>
         <section class="main-content">
             <h2 id="cardiology">Кардиология</h2>

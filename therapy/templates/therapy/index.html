@@ -1,4 +1,66 @@
 {% extends 'main/base.html' %}
 {% block content %}
-    <h1>Therapy</h1>
+    <style>
+        .therapy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .therapy-container h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .therapy-container p {
+            text-align: justify;
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        .therapy-directions {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .therapy-directions li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .therapy-directions li:hover {
+            background-color: #bdc3c7;
+        }
+
+        .therapy-directions li a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        .therapy-directions li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="therapy-container">
+        <h1>Терапия</h1>
+        <p>Терапия — это область медицины, которая занимается диагностикой, лечением и профилактикой внутренних заболеваний. Врачи-терапевты работают с широким спектром заболеваний, начиная от простудных инфекций и заканчивая хроническими болезнями сердца и легких.</p>
+        <p>Основные направления терапии включают:</p>
+        <ul class="therapy-directions">
+            <li><a href="{% url 'cardiology:cardiology' %}">Кардиология</a> — лечение сердечно-сосудистых заболеваний.</li>
+            <li><a href="#">Пульмонология</a> — лечение заболеваний дыхательной системы.</li>
+            <li><a href="#">Гастроэнтерология</a> — лечение заболеваний желудочно-кишечного тракта.</li>
+            <li><a href="#">Нефрология</a> — лечение заболеваний почек.</li>
+            <li><a href="#">Эндокринология</a> — лечение заболеваний эндокринной системы.</li>
+            <li><a href="#">Ревматология</a> — лечение заболеваний суставов и соединительной ткани.</li>
+        </ul>
+    </div>
 {% endblock %}

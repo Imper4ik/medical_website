@@ -1,133 +1,70 @@
-<!-- cardiology/templates/cardiology/cardiology.html -->
 {% extends 'main/base.html' %}
 {% load static %}
+
 {% block content %}
-<style>
-    /* Общие стили */
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f9f9f9;
-        margin: 0;
-        padding: 0;
-    }
-    .wrapper {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    header {
-        background-color: #003366;
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-    }
-    header nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    header nav ul li {
-        display: inline-block;
-        margin-right: 20px;
-    }
-    header nav ul li:last-child {
-        margin-right: 0;
-    }
-    header nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.1em;
-    }
-    header nav ul li a:hover {
-        text-decoration: underline;
-    }
-    .content {
-        flex: 1;
-        padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-    }
-    .section {
-        margin-bottom: 20px;
-    }
-    .important {
-        color: #cc0000;
-        font-weight: bold;
-    }
-    footer {
-        background-color: #003366;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-    }
+    <style>
+        .cardiology-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Стили для кардиологии */
-    .cardiology-definition {
-        margin-bottom: 20px;
-    }
-    .cardiology-definition p {
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 15px;
-    }
-    .cardiology-list {
-        list-style-type: none;
-        padding: 0;
-        margin-top: 20px;
-    }
-    .cardiology-list li {
-        margin-bottom: 10px;
-    }
-    .cardiology-list li a {
-        color: brown;
-        text-decoration: none;
-    }
-    .cardiology-list li a:hover {
-        text-decoration: underline;
-    }
-    .bottom-links {
-        margin-top: 30px;
-        text-align: center;
-    }
-    .bottom-links ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    .bottom-links ul li {
-        display: inline-block;
-        margin-right: 20px;
-    }
-    .bottom-links ul li a {
-        color: brown;
-        text-decoration: none;
-        font-size: 16px;
-    }
-    .bottom-links ul li a:hover {
-        text-decoration: underline;
-    }
-</style>
+        .cardiology-container h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
 
-<div class="wrapper">
+        .cardiology-container p {
+            text-align: justify;
+            line-height: 1.6;
+            color: #34495e;
+        }
 
-    <div class="content">
-        <div class="cardiology-definition">
-            <h1>Кардиология</h1>
-            <p>Кардиология – это медицинская специализация, посвященная изучению и лечению заболеваний сердечно-сосудистой системы. Она включает в себя диагностику и лечение таких распространенных состояний, как ишемическая болезнь сердца, аритмии, гипертония, пороки сердца и сердечная недостаточность. Кардиология активно использует передовые методы диагностики, такие как ЭКГ, УЗИ сердца, коронарография, и разнообразные методы лечения, включая медикаментозное и хирургическое вмешательство.</p>
+        .cardiology-directions {
+            list-style-type: none;
+            padding: 0;
+        }
 
-            <p>Кардиология играет ключевую роль в поддержании здоровья и продлении жизни пациентов с сердечно-сосудистыми заболеваниями. Специалисты в области кардиологии работают как в стационарных условиях, так и в амбулаторных центрах, обеспечивая необходимое лечение и рекомендации по профилактике сердечно-сосудистых заболеваний. Кардиологические исследования и разработки новых методов лечения играют важную роль в современной медицине.</p>
-        </div>
+        .cardiology-directions li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
 
-        <div class="bottom-links">
-            <h3><a href="{% url 'cardiology:heart_success' %}">Подробнее о заболеваниях:</a></h3>
-        </div>
+        .cardiology-directions li:hover {
+            background-color: #bdc3c7;
+        }
+
+        .cardiology-directions li a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        .cardiology-directions li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="cardiology-container">
+        <h1>Кардиология</h1>
+        <p>Кардиология – это медицинская специализация, посвященная изучению и лечению заболеваний сердечно-сосудистой системы. Она включает в себя диагностику и лечение таких распространенных состояний, как ишемическая болезнь сердца, аритмии, гипертония, пороки сердца и сердечная недостаточность. Кардиология активно использует передовые методы диагностики, такие как ЭКГ, УЗИ сердца, коронарография, и разнообразные методы лечения, включая медикаментозное и хирургическое вмешательство.</p>
+        <p>Кардиология играет ключевую роль в поддержании здоровья и продлении жизни пациентов с сердечно-сосудистыми заболеваниями. Специалисты в области кардиологии работают как в стационарных условиях, так и в амбулаторных центрах, обеспечивая необходимое лечение и рекомендации по профилактике сердечно-сосудистых заболеваний. Кардиологические исследования и разработки новых методов лечения играют важную роль в современной медицине.</p>
+        <p>Основные направления кардиологии включают:</p>
+        <ul class="cardiology-directions">
+            <li><a href="#">Коронарное шунтирование и стентирование</a> – хирургические методы лечения ишемической болезни сердца.</li>
+            <li><a href="#">Электрофизиология и кардиостимуляция</a> – методы лечения аритмий и нарушений сердечного ритма.</li>
+            <li><a href="#">Лечение сердечной недостаточности</a> – комплексное лечение с целью улучшения функции сердца и качества жизни пациентов.</li>
+            <li><a href="#">Лечение гипертонии</a> – медикаментозное и немедикаментозное воздействие на высокое артериальное давление.</li>
+            <li><a href="#">Диагностика и лечение пороков сердца</a> – оперативное вмешательство для исправления врожденных или приобретенных дефектов сердца.</li>
+            <li><a href="#">Профилактика сердечно-сосудистых заболеваний</a> – рекомендации по изменению образа жизни и контрольные меры для предотвращения сердечно-сосудистых заболеваний.</li>
+            <li><a href="#">Аритмология</a> – специализация по диагностике и лечению аритмий и нарушений сердечного ритма.</li>
+        </ul>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Ваша компания. Все права защищены.</p>
-    </footer>
-</div>
-
 {% endblock %}
-

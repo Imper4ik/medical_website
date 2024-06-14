@@ -1,4 +1,80 @@
 {% extends 'main/base.html' %}
+{% load static %}
+
 {% block content %}
-    <h1>Orthopedics</h1>
+    <style>
+        .orthopedics-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .orthopedics-container h1 {
+            text-align: center;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+        }
+
+        .orthopedics-container p {
+            text-align: justify;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .orthopedics-topics {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .orthopedics-topics li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .orthopedics-topics li:hover {
+            background-color: #c9e0f5;
+        }
+
+        .orthopedics-topics li a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .orthopedics-topics li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="orthopedics-container">
+        <h1>Ортопедия</h1>
+        <p>Ортопедия — это медицинская специальность, занимающаяся диагностикой, лечением и профилактикой заболеваний опорно-двигательного аппарата человека. Она охватывает широкий спектр состояний, начиная от травм и переломов до дегенеративных заболеваний суставов и позвоночника.</p>
+        <p>Основные направления ортопедии включают:</p>
+        <ul class="orthopedics-topics">
+            <li>
+                <a href="#">Травматология и переломы</a> – ортопеды занимаются лечением различных типов травм и переломов костей, включая бедра, ключицу, руки и ноги.
+            </li>
+            <li>
+                <a href="#">Артрит и артроз</a> – это воспалительные и дегенеративные заболевания суставов, которые требуют комплексного лечения и мониторинга.
+            </li>
+            <li>
+                <a href="#">Деформации позвоночника и стоп</a> – ортопеды занимаются коррекцией деформаций и аномалий различных частей опорно-двигательного аппарата.
+            </li>
+            <li>
+                <a href="#">Эндопротезирование</a> – это оперативное восстановление функций суставов путем имплантации протезов, например, тазобедренного или коленного сустава.
+            </li>
+            <li>
+                <a href="#">Спортивная медицина</a> – включает в себя профилактику и лечение травм, связанных с активным образом жизни и занятиями спортом.
+            </li>
+            <li>
+                <a href="#">Педиатрическая ортопедия</a> – специализация, занимающаяся диагностикой и лечением детских заболеваний и деформаций опорно-двигательного аппарата.
+            </li>
+        </ul>
+    </div>
 {% endblock %}

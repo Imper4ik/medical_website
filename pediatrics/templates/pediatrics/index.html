@@ -1,4 +1,66 @@
 {% extends 'main/base.html' %}
 {% block content %}
-    <h1>Pediatrics</h1>
+    <style>
+        .pediatrics-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pediatrics-container h1 {
+            text-align: center;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+        }
+
+        .pediatrics-container p {
+            text-align: justify;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .pediatrics-directions {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pediatrics-directions li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .pediatrics-directions li:hover {
+            background-color: #c9e0f5;
+        }
+
+        .pediatrics-directions li a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .pediatrics-directions li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="pediatrics-container">
+        <h1>Педиатрия</h1>
+        <p>Педиатрия — это область медицины, которая занимается лечением, диагностикой и профилактикой заболеваний у детей от рождения до подросткового возраста. Педиатры обеспечивают всесторонний уход за здоровьем детей, включая плановые осмотры, вакцинацию и лечение различных заболеваний.</p>
+        <p>Основные направления педиатрии включают:</p>
+        <ul class="pediatrics-directions">
+            <li><a href="#">Неонатология</a> — уход за новорожденными и лечение заболеваний новорожденных.</li>
+            <li><a href="#">Детская гастроэнтерология</a> — лечение заболеваний желудочно-кишечного тракта у детей.</li>
+            <li><a href="#">Детская кардиология</a> — лечение сердечно-сосудистых заболеваний у детей.</li>
+            <li><a href="#">Детская эндокринология</a> — лечение эндокринных заболеваний у детей.</li>
+            <li><a href="#">Детская неврология</a> — лечение заболеваний нервной системы у детей.</li>
+            <li><a href="#">Детская иммунология</a> — лечение и профилактика иммунных заболеваний у детей.</li>
+        </ul>
+    </div>
 {% endblock %}
